@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Kaushan';
+    src: url('../fonts/KaushanScript-Regular.otf');
+}
+.box {
+    height: 100px;
+    min-width: 100px;
+    background-color: white;
+   /* display: inline-block;*/
+    box-sizing: border-box;
+    border: 2px solid black;
+    /*margin: auto;*/
+    /*padding-top: 20px;*/
+}
+h3 {
+    font-family: 'Kaushan';
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+#Player1 {
+    background-color: blue;
+    font-size: 3em;
+    float: left;
+}
+#Player2 {
+    background-color: red;
+    font-size: 3em;
+    float: right;
+}
