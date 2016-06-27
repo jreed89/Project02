@@ -15,18 +15,18 @@ var player1 = document.getElementById("Player1")
 var player2 = document.getElementById("Player2")
 
 
-// function createAddName(){
-// 	var startButton = document.getElementById('start');
-// 	var name = document.getElementById('input-container')
-// 	var nameButton = document.createElement('button')
-// 	var nameInput = document.createElement('input')
-// 	nameInput.setAttribute('id', "input-box")
-// 	nameInput.setAttribute('type', "text")
-// 	nameButton.setAttribute('id', "submit")
-// 	nameButton.innerHTML = "NAME";
-// 	name.appendChild(nameInput)
-// 	name.appendChild(nameButton)
-// }
+function createAddName(){
+	var startButton = document.getElementById('start');
+	var name = document.getElementById('input-container')
+	var nameButton = document.createElement('button')
+	var nameInput = document.createElement('input')
+	nameInput.setAttribute('id', "input-box")
+	nameInput.setAttribute('type', "text")
+	nameButton.setAttribute('id', "submit")
+	nameButton.innerHTML = "NAME";
+	name.appendChild(nameInput)
+	name.appendChild(nameButton)
+}
 
 function addName(){
 	// var $myButton = $('#submit');
@@ -77,7 +77,7 @@ function whenClicked(box){
 		console.log(clicked) // how many clicks there are after the click
 		checkForWin();
 	} else {
-		alert('already clicked');
+		alert('Already Clicked');
 	}
 	
 }
