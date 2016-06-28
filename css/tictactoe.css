@@ -29,3 +29,8 @@ h3 {
     font-size: 3em;
     float: right;
 }
+table {
+    width: 50%;
+    height: 50%;
+
+}

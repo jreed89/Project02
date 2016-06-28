@@ -3,8 +3,9 @@ window.onload = function(){
     	var beginName = document.getElementById("start"); 
     	beginName.onclick = function(){ //when "lets get started" button is clicked, 
     	createAddName()
+    	start();
     	}
-		start();
+		
 }
 
 
@@ -26,24 +27,25 @@ function createAddName(){
 	nameButton.innerHTML = "NAME";
 	name.appendChild(nameInput)
 	name.appendChild(nameButton)
+	addname()
 }
 
 function addName(){
-	// var $myButton = $('#submit');
+	var $myButton = $('#submit');
 
- //  $($myButton).click(function(event) {
- //    event.preventDefault(); //stops the page from reloading when clicked
- //    var $box = $('input'); //makes a variable 
- //    addtoDo($box.val());
- //    $box.val(""); //reset after it types 
- //  });
+  $($myButton).click(function(event) {
+    event.preventDefault(); //stops the page from reloading when clicked
+    var $box = $('input'); //makes a variable 
+    addtoDo($box.val());
+    $box.val(""); //reset after it types 
+  });
   
- //  var $toDo = $('#to-do-list');
- //  var addtoDo = function(task){
- //    var newTask = document.createElement('div');//tried using the jQuery method $('<div></div>')
- //    newTask.innerHTML = task;                   // or ('<div')
- //    $toDo[0].appendChild(newTask);
- //  };
+  var $toDo = $('#to-do-list');
+  var addtoDo = function(task){
+    var newTask = document.createElement('div');//tried using the jQuery method $('<div></div>')
+    newTask.innerHTML = task;                   // or ('<div')
+    $toDo[0].appendChild(newTask);
+  };
 }
 
 function start(){
