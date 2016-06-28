@@ -1,21 +1,21 @@
 window.onload = function(){
     console.log("this is the it")
     	var beginName = document.getElementById("start"); 
-    	beginName.onclick = function(){ //when "lets get started" button is clicked, 
+    	beginName.onclick = function(){ //when "lets get started" button is clicked,
     	createAddName()
-    	start();
+    	alert("enter your name Player 1") 
     	}
 		
 }
 
-
+//this is where all of my "universal variables" will go, access them when needed 
 var arrayX = []
 var arrayO = []
 var tiles = document.getElementsByClassName('box')
 var player1 = document.getElementById("Player1")
 var player2 = document.getElementById("Player2")
 
-
+//create the html that will hold where to enter your name
 function createAddName(){
 	var startButton = document.getElementById('start');
 	var name = document.getElementById('input-container')
@@ -23,29 +23,40 @@ function createAddName(){
 	var nameInput = document.createElement('input')
 	nameInput.setAttribute('id', "input-box")
 	nameInput.setAttribute('type', "text")
+	// nameInput.setAttribute('type', "button")
 	nameButton.setAttribute('id', "submit")
 	nameButton.innerHTML = "NAME";
 	name.appendChild(nameInput)
 	name.appendChild(nameButton)
-	addname()
+	addName()
 }
-
+//Display Players Names in the proper fields and make start button and name input dissapear
+//the game is activated
 function addName(){
-	var $myButton = $('#submit');
+  var myButton = document.getElementById('submit') //the submit name button
+  var beginName = document.getElementById("start"); //the start button
+  nameClick = 0;
+  myButton.addEventListener('click', function(){
+  	var input = document.getElementById('input-box')
+  	if (nameClick %2 === 0){
+  		// var retVal = prompt("Enter your name Player1: ", "your name here");
+    //     	player1.innerHTML = player1 + input.retVal);
+  		player1.innerHTML = " ";
+  		player1.innerHTML = player1.innerHTML + input.value;
+  		nameClick += 1;
+  		alert("enter your name Player 2")
+  		input.value = " "
+  	} else {
+  		player2.innerHTML = " ";
+  		player2.innerHTML = player2.innerHTML + input.value;
+  		myButton.style.display = "none";
+  		input.style.display = "none";
+  		beginName.style.display = "none";
+  		start();
 
-  $($myButton).click(function(event) {
-    event.preventDefault(); //stops the page from reloading when clicked
-    var $box = $('input'); //makes a variable 
-    addtoDo($box.val());
-    $box.val(""); //reset after it types 
-  });
-  
-  var $toDo = $('#to-do-list');
-  var addtoDo = function(task){
-    var newTask = document.createElement('div');//tried using the jQuery method $('<div></div>')
-    newTask.innerHTML = task;                   // or ('<div')
-    $toDo[0].appendChild(newTask);
-  };
+  	}
+  })
+
 }
 
 function start(){
@@ -57,9 +68,6 @@ function start(){
     	})
     }
 }
-
-
-
 
 
 var letterX = "<img src=https://zengaming.zendesk.com/system/photos/8507/2389/avatar-1452001476.jpg>";
