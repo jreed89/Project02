@@ -3,7 +3,6 @@ window.onload = function(){
     	var beginName = document.getElementById("start"); 
     	beginName.onclick = function(){ //when "lets get started" button is clicked,
     	createAddName()
-    	alert("enter your name Player 1") 
     	}
 		
 }
@@ -19,43 +18,50 @@ var player2 = document.getElementById("Player2")
 function createAddName(){
 	var startButton = document.getElementById('start');
 	var name = document.getElementById('input-container')
-	var nameButton = document.createElement('button')
+	// var nameButton = document.createElement('button')
 	var nameInput = document.createElement('input')
 	nameInput.setAttribute('id', "input-box")
-	nameInput.setAttribute('type', "text")
-	// nameInput.setAttribute('type', "button")
-	nameButton.setAttribute('id', "submit")
-	nameButton.innerHTML = "NAME";
+	// nameInput.setAttribute('id', "input-box")
+	// nameInput.setAttribute('type', "text")
+	// nameButton.setAttribute('id', "submit")
+	// nameButton.innerHTML = "NAME";
 	name.appendChild(nameInput)
-	name.appendChild(nameButton)
+	// name.appendChild(nameButton)
 	addName()
 }
 //Display Players Names in the proper fields and make start button and name input dissapear
 //the game is activated
 function addName(){
+  var input = document.getElementById('input-box')
   var myButton = document.getElementById('submit') //the submit name button
   var beginName = document.getElementById("start"); //the start button
-  nameClick = 0;
-  myButton.addEventListener('click', function(){
-  	var input = document.getElementById('input-box')
-  	if (nameClick %2 === 0){
-  		// var retVal = prompt("Enter your name Player1: ", "your name here");
-    //     	player1.innerHTML = player1 + input.retVal);
-  		player1.innerHTML = " ";
-  		player1.innerHTML = player1.innerHTML + input.value;
-  		nameClick += 1;
-  		alert("enter your name Player 2")
-  		input.value = " "
-  	} else {
-  		player2.innerHTML = " ";
-  		player2.innerHTML = player2.innerHTML + input.value;
-  		myButton.style.display = "none";
-  		input.style.display = "none";
-  		beginName.style.display = "none";
-  		start();
+  // nameClick = 0;
+  var retVal = prompt("Enter your name Player1 : ", "Player1 Name");
+    player1.innerHTML = retVal;
+  var retVal = prompt("Enter your name Player2: ", "Player2 Name");
+    player2.innerHTML = retVal;
+    input.style.display = "none";
+  	beginName.style.display = "none";
+  	start();
+//////////////ANOTHER FORMULA TO MAKE A MAKE PLAYERS NAMES/////////////////////////
+  // myButton.addEventListener('click', function(){
+  // 	var input = document.getElementById('input-box')
+ // if (nameClick %2 === 0){
+  	// 	player1.innerHTML = " ";
+  	// 	player1.innerHTML = player1.innerHTML + input.value;
+  	// 	nameClick += 1;
+  	// 	alert("enter your name Player 2")
+  	// 	input.value = " "
+  	// } else {
+  	// 	player2.innerHTML = " ";
+  	// 	player2.innerHTML = player2.innerHTML + input.value;
+  	// 	myButton.style.display = "none";
+  	// 	input.style.display = "none";
+  	// 	beginName.style.display = "none";
+  	// 	start();
 
-  	}
-  })
+  // 	}
+  // })
 
 }
 
