@@ -10,11 +10,6 @@ window.onload = function(){
 //this is where all of my "universal variables" will go, access them when needed 
 var arrayX = []
 var arrayO = []
-<<<<<<< HEAD
-winCombos = [ ["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], 
-			  ["1", "4", "7"], ["2", "5", "8"], ["3", "6", "9"], 
-			  ["1", "5", "9"], ["3", "5", "7"]]
-=======
 winCombos  = ['1', '2', '3', 
 				 '4', '5', '6', 
 				 '7', '8', '9']
@@ -24,7 +19,6 @@ winCombos  = ['1', '2', '3',
 // winCombos = [ [1, 2, 3], [4, 5, 6], [7, 8, 9], 
 // 			  [1, 4, 7], [2, 5, 8], [3, 6, 9], 
 // 			  [1, 5, 9], [3, 5, 7]]
->>>>>>> master
 var tiles = document.getElementsByClassName('box')
 var player1 = document.getElementById("Player1")
 var player2 = document.getElementById("Player2")
@@ -183,7 +177,7 @@ function checkForWin(){
 // 	// }
 // 		} 
 // }
->>>>>>> master
+
 
 // function gameOver(){
 
