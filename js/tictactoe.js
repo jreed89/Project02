@@ -10,9 +10,21 @@ window.onload = function(){
 //this is where all of my "universal variables" will go, access them when needed 
 var arrayX = []
 var arrayO = []
+<<<<<<< HEAD
 winCombos = [ ["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], 
 			  ["1", "4", "7"], ["2", "5", "8"], ["3", "6", "9"], 
 			  ["1", "5", "9"], ["3", "5", "7"]]
+=======
+winCombos  = ['1', '2', '3', 
+				 '4', '5', '6', 
+				 '7', '8', '9']
+// winCombos = [ ["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], 
+// 			  ["1", "4", "7"], ["2", "5", "8"], ["3", "6", "9"], 
+// 			  ["1", "5", "9"], ["3", "5", "7"]]
+// winCombos = [ [1, 2, 3], [4, 5, 6], [7, 8, 9], 
+// 			  [1, 4, 7], [2, 5, 8], [3, 6, 9], 
+// 			  [1, 5, 9], [3, 5, 7]]
+>>>>>>> master
 var tiles = document.getElementsByClassName('box')
 var player1 = document.getElementById("Player1")
 var player2 = document.getElementById("Player2")
@@ -107,6 +119,7 @@ function whenClicked(box){
 	}
 	
 }
+<<<<<<< HEAD
 
 function checkForWin(){
 	// for (var i = 0; i < tiles.length; i++){
@@ -120,6 +133,57 @@ function checkForWin(){
 	// }
 }
 }
+=======
+function checkForWin(){
+	// if (arrayX.includes(winCombos)){
+	// 	alert("win")
+	// }
+	// console.log(winCombos[i])
+	// console.log(winCombos[0])
+	// console.log(arrayX[3])
+	if (
+		arrayX.includes("1") && arrayX.includes("2") && arrayX.includes("3") ||
+		arrayX.includes("4") && arrayX.includes("5") && arrayX.includes("6") ||
+		arrayX.includes("7") && arrayX.includes("8") && arrayX.includes("9") ||
+		arrayX.includes("1") && arrayX.includes("4") && arrayX.includes("7") ||
+		arrayX.includes("2") && arrayX.includes("5") && arrayX.includes("8") ||
+		arrayX.includes("3") && arrayX.includes("6") && arrayX.includes("9") ||
+		arrayX.includes("1") && arrayX.includes("5") && arrayX.includes("9") ||
+		arrayX.includes("3") && arrayX.includes("5") && arrayX.includes("7") ) {
+			alert( "Player1 Is the Truth");
+		} else if (
+		arrayO.includes("1") && arrayO.includes("2") && arrayO.includes("3") ||
+		arrayO.includes("4") && arrayO.includes("5") && arrayO.includes("6") ||
+		arrayO.includes("7") && arrayO.includes("8") && arrayO.includes("9") ||
+		arrayO.includes("1") && arrayO.includes("4") && arrayO.includes("7") ||
+		arrayO.includes("2") && arrayO.includes("5") && arrayO.includes("8") ||
+		arrayO.includes("3") && arrayO.includes("6") && arrayO.includes("9") ||
+		arrayO.includes("1") && arrayO.includes("5") && arrayO.includes("9") ||
+		arrayO.includes("3") && arrayO.includes("5") && arrayO.includes("7")) {
+		alert( "Player2 Is the Truth");
+	}
+	// for (var i = 0; i < winCombos.length; i++){
+	// 	for (var j = 0; j < arrayX.length; i++) {
+	// 		if (winCombos[i] == arrayX[j]) {
+	// 			alert("win")
+	// 		}
+	// 	}
+	// }
+}
+// 	// for (var i = 0; i < tiles.length; i++){
+// 		if( arrayX == winCombos[0] || arrayX === winCombos[1] || arrayX === winCombos[2] || 
+// 			arrayX === winCombos[3] || arrayX === winCombos[4] || arrayX === winCombos[5] || 
+// 			arrayX === winCombos[6] || arrayX === winCombos[7] || arrayX === winCombos[8] ) {
+//   			alert("checkForWin Player 1")		
+// 	// arrayX check all numbers in arrayX if they are equal to anny winCombos, we have a winner
+// 		} else if (arrayO === winCombos[0] || arrayO === winCombos[1] || arrayO === winCombos[2] || 
+// 				   arrayO === winCombos[3] || arrayO === winCombos[4] || arrayO === winCombos[5] || 
+// 				   arrayO === winCombos[6] || arrayO === winCombos[7] || arrayO === winCombos[8] ) {
+// 			console.log("checkForWin Player 2")
+// 	// }
+// 		} 
+// }
+>>>>>>> master
 
 // function gameOver(){
 
