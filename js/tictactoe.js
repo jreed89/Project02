@@ -113,21 +113,6 @@ function whenClicked(box){
 	}
 	
 }
-<<<<<<< HEAD
-
-function checkForWin(){
-	// for (var i = 0; i < tiles.length; i++){
-		if(arrayX === winCombos[0]){
-  			alert("checkForWin Player 1")		
-
-	//arrayX check all numbers in arrayX if they are equal to anny winCombos, we have a winner
-		} else if (arrayO === winCombos[0]) {
-		//check arrayO// if ()
-			console.log("checkForWin Player 2")
-	// }
-}
-}
-=======
 function checkForWin(){
 	// if (arrayX.includes(winCombos)){
 	// 	alert("win")
