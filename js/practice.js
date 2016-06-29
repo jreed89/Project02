@@ -42,7 +42,6 @@ function addName(){
     player2.innerHTML = retVal;
     input.style.display = "none";
   	beginName.style.display = "none";
-  	alert("your turn Player 1")
   	start();
 //////////////ANOTHER FORMULA TO MAKE A PLAYERS NAMES/////////////////////////
   // myButton.addEventListener('click', function(){
@@ -87,22 +86,17 @@ var letterX = "<img src=https://zengaming.zendesk.com/system/photos/8507/2389/av
 var letterO = "<img src=http://ecx.images-amazon.com/images/I/41kZo9j0CeL._AC_UL115_.jpg>";
 clicked = 0;
 function whenClicked(box){
-	// console.log(box) // the tile that is being clicked on
-	// console.log(box.dataset.value)
+	console.log(box) // the tile that is being clicked on
 	if(!box.innerHTML){
 		if( clicked %2 === 0){ //first click will be 1 which will cut to the else stament and display X
 			box.innerHTML = letterX;
-			arrayX.push(box.dataset.value)
-			console.log(arrayX)
-			// checkForWin()
+
 		} else {
 			box.innerHTML = letterO;
-			arrayO.push(box.dataset.value)
-			console.log(arrayO)
 		}
-		// console.log(clicked) //the number of clicks before click
+		console.log(clicked) //the number of clicks before click
 		clicked += 1; // add number of clicks by 1 everytime a tile is clicked
-		// console.log(clicked) // how many clicks there are after the click
+		console.log(clicked) // how many clicks there are after the click
 		checkForWin();
 	} else {
 		alert('Already Clicked');
@@ -111,15 +105,10 @@ function whenClicked(box){
 }
 
 
-// function checkForWin(LetterToCheck){
-// 	if LetterToCheck = x {
+function checkForWin(){
 
-
-// 	arrayX check all numbers in arrayX if they are equal to anny winCombos, we have a winner
-// 		}
-// 		else
-// 		check arrayO// if ()
-// }
+		// if ()
+}
 
 // function gameOver(){
 // winCombos = [ [0, 1, 2], [3, 4, 5], [6, 7, 8], 

@@ -4,14 +4,14 @@
 }
 .box {
     height: 100px;
-    min-width: 100px;
+    width: 100px;
     background-color: white;
-   /* display: inline-block;*/
+    /*display: inline-block;*/
     box-sizing: border-box;
     border: 2px solid black;
     margin: 0 auto;
-    /*padding-top: 20px;*/
-}
+    /*padding-bottom: 100px;
+*/}
 h3 {
     font-family: 'Kaushan';
     display: inline-block;
@@ -21,16 +21,20 @@ h3 {
 }
 #Player1 {
     background-color: teal;
+    border-radius: 10px;
+    border: 5px solid black;
     font-size: 3em;
     float: left;
 }
 #Player2 {
     background-color: orange;
+    border: 5px solid black;
     font-size: 3em;
+    border-radius: 10px;
     float: right;
 }
-table {
+/*table {
     width: 50%;
     height: 50%;
 
-}
+}*/
