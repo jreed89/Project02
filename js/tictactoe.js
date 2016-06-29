@@ -10,6 +10,9 @@ window.onload = function(){
 //this is where all of my "universal variables" will go, access them when needed 
 var arrayX = []
 var arrayO = []
+winCombos = [ ["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], 
+			  ["1", "4", "7"], ["2", "5", "8"], ["3", "6", "9"], 
+			  ["1", "5", "9"], ["3", "5", "7"]]
 var tiles = document.getElementsByClassName('box')
 var player1 = document.getElementById("Player1")
 var player2 = document.getElementById("Player2")
@@ -77,54 +80,49 @@ function start(){
 
     }
 }
-	// var indexX = this.tiles.indexOf(box);
-	// console.log(indexX);
-// while (indexX != -1) {
-// 	arrayX
-// }
 
 var letterX = "<img src=https://zengaming.zendesk.com/system/photos/8507/2389/avatar-1452001476.jpg>";
 var letterO = "<img src=http://ecx.images-amazon.com/images/I/41kZo9j0CeL._AC_UL115_.jpg>";
 clicked = 0;
 function whenClicked(box){
 	// console.log(box) // the tile that is being clicked on
-	// console.log(box.dataset.value)
+	// console.log(box.dataset.value) the v
 	if(!box.innerHTML){
 		if( clicked %2 === 0){ //first click will be 1 which will cut to the else stament and display X
 			box.innerHTML = letterX;
-			arrayX.push(box.dataset.value)
-			console.log(arrayX)
-			// checkForWin()
+			arrayX.push(box.dataset.value) // putting the data-value in the arrayX as a string value
+			console.log(arrayX) //
+			checkForWin()
 		} else {
 			box.innerHTML = letterO;
-			arrayO.push(box.dataset.value)
-			console.log(arrayO)
+			arrayO.push(box.dataset.value) // putting the data-value in the array0 as a string value
+			console.log(arrayO) //
+			checkForWin()
 		}
 		// console.log(clicked) //the number of clicks before click
 		clicked += 1; // add number of clicks by 1 everytime a tile is clicked
 		// console.log(clicked) // how many clicks there are after the click
-		checkForWin();
 	} else {
 		alert('Already Clicked');
 	}
 	
 }
 
+function checkForWin(){
+	// for (var i = 0; i < tiles.length; i++){
+		if(arrayX === winCombos[0]){
+  			alert("checkForWin Player 1")		
 
-// function checkForWin(LetterToCheck){
-// 	if LetterToCheck = x {
-
-
-// 	arrayX check all numbers in arrayX if they are equal to anny winCombos, we have a winner
-// 		}
-// 		else
-// 		check arrayO// if ()
-// }
+	//arrayX check all numbers in arrayX if they are equal to anny winCombos, we have a winner
+		} else if (arrayO === winCombos[0]) {
+		//check arrayO// if ()
+			console.log("checkForWin Player 2")
+	// }
+}
+}
 
 // function gameOver(){
-// winCombos = [ [0, 1, 2], [3, 4, 5], [6, 7, 8], 
-// 			  [0, 3, 6], [1, 4, 7], [2, 5, 8], 
-// 			  [0, 4, 8], [2, 4, 6]]
+
 //  if(??? === winCombos[i]){
 //  	alert("Game Over, " +  + "wins")
 //  }
