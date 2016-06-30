@@ -10,21 +10,12 @@ window.onload = function(){
 //this is where all of my "universal variables" will go, access them when needed 
 var arrayX = []
 var arrayO = []
-<<<<<<< HEAD
-winCombos = [ ["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], 
-			  ["1", "4", "7"], ["2", "5", "8"], ["3", "6", "9"], 
-			  ["1", "5", "9"], ["3", "5", "7"]]
-=======
 winCombos  = ['1', '2', '3', 
 				 '4', '5', '6', 
 				 '7', '8', '9']
-// winCombos = [ ["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], 
-// 			  ["1", "4", "7"], ["2", "5", "8"], ["3", "6", "9"], 
-// 			  ["1", "5", "9"], ["3", "5", "7"]]
 // winCombos = [ [1, 2, 3], [4, 5, 6], [7, 8, 9], 
 // 			  [1, 4, 7], [2, 5, 8], [3, 6, 9], 
 // 			  [1, 5, 9], [3, 5, 7]]
->>>>>>> master
 var tiles = document.getElementsByClassName('box')
 var player1 = document.getElementById("Player1")
 var player2 = document.getElementById("Player2")
@@ -87,6 +78,7 @@ function start(){
     	tiles[i].addEventListener('click', function(){
     		// console.log(this) //shows me the tiles
     		// console.log(this.indexOf())
+    		tile.removeEventListener()
     		whenClicked(this) //when each tile is clicked it will run this function
     	})
 
@@ -97,6 +89,8 @@ var letterX = "<img src=https://zengaming.zendesk.com/system/photos/8507/2389/av
 var letterO = "<img src=http://ecx.images-amazon.com/images/I/41kZo9j0CeL._AC_UL115_.jpg>";
 clicked = 0;
 function whenClicked(box){
+	// for (var i = 0; i < tiles.length; i++){
+ //    	tiles[i].addEventListener('click', function()
 	// console.log(box) // the tile that is being clicked on
 	// console.log(box.dataset.value) the v
 	if(!box.innerHTML){
@@ -119,21 +113,7 @@ function whenClicked(box){
 	}
 	
 }
-<<<<<<< HEAD
 
-function checkForWin(){
-	// for (var i = 0; i < tiles.length; i++){
-		if(arrayX === winCombos[0]){
-  			alert("checkForWin Player 1")		
-
-	//arrayX check all numbers in arrayX if they are equal to anny winCombos, we have a winner
-		} else if (arrayO === winCombos[0]) {
-		//check arrayO// if ()
-			console.log("checkForWin Player 2")
-	// }
-}
-}
-=======
 function checkForWin(){
 	// if (arrayX.includes(winCombos)){
 	// 	alert("win")
@@ -150,7 +130,8 @@ function checkForWin(){
 		arrayX.includes("3") && arrayX.includes("6") && arrayX.includes("9") ||
 		arrayX.includes("1") && arrayX.includes("5") && arrayX.includes("9") ||
 		arrayX.includes("3") && arrayX.includes("5") && arrayX.includes("7") ) {
-			alert( "Player1 Is the Truth");
+			alert( "Player1 Is the WINNER");
+			// resetGame()
 		} else if (
 		arrayO.includes("1") && arrayO.includes("2") && arrayO.includes("3") ||
 		arrayO.includes("4") && arrayO.includes("5") && arrayO.includes("6") ||
@@ -160,16 +141,21 @@ function checkForWin(){
 		arrayO.includes("3") && arrayO.includes("6") && arrayO.includes("9") ||
 		arrayO.includes("1") && arrayO.includes("5") && arrayO.includes("9") ||
 		arrayO.includes("3") && arrayO.includes("5") && arrayO.includes("7")) {
-		alert( "Player2 Is the Truth");
+		alert( "Player2 Is the WINNER");
+		// resetGame();
+	} else if (clicked == 8) {
+		alert("all tiles clicked")
+		// resetGame();
 	}
-	// for (var i = 0; i < winCombos.length; i++){
+	
+}
+// for (var i = 0; i < winCombos.length; i++){
 	// 	for (var j = 0; j < arrayX.length; i++) {
 	// 		if (winCombos[i] == arrayX[j]) {
 	// 			alert("win")
 	// 		}
 	// 	}
 	// }
-}
 // 	// for (var i = 0; i < tiles.length; i++){
 // 		if( arrayX == winCombos[0] || arrayX === winCombos[1] || arrayX === winCombos[2] || 
 // 			arrayX === winCombos[3] || arrayX === winCombos[4] || arrayX === winCombos[5] || 
@@ -183,11 +169,15 @@ function checkForWin(){
 // 	// }
 // 		} 
 // }
->>>>>>> master
 
-// function gameOver(){
 
-//  if(??? === winCombos[i]){
-//  	alert("Game Over, " +  + "wins")
-//  }
-// 			}
+
+
+// function resetGame(){
+// 	console.log('win')
+// 		// addwin()
+// }
+
+// function addWin(){
+
+// }
