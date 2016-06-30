@@ -11,8 +11,8 @@ window.onload = function(){
 var arrayX = []
 var arrayO = []
 winCombos  = ['1', '2', '3', 
-				 '4', '5', '6', 
-				 '7', '8', '9']
+			  '4', '5', '6', 
+			  '7', '8', '9']
 // winCombos = [ [1, 2, 3], [4, 5, 6], [7, 8, 9], 
 // 			  [1, 4, 7], [2, 5, 8], [3, 6, 9], 
 // 			  [1, 5, 9], [3, 5, 7]]
@@ -74,11 +74,11 @@ function addName(){
 
 function start(){
 	// console.log(tiles) //the tiles form an array
+	tiles.innerHTML = " "
     for (var i = 0; i < tiles.length; i++){
     	tiles[i].addEventListener('click', function(){
     		// console.log(this) //shows me the tiles
     		// console.log(this.indexOf())
-    		tile.removeEventListener()
     		whenClicked(this) //when each tile is clicked it will run this function
     	})
 
@@ -115,12 +115,6 @@ function whenClicked(box){
 }
 
 function checkForWin(){
-	// if (arrayX.includes(winCombos)){
-	// 	alert("win")
-	// }
-	// console.log(winCombos[i])
-	// console.log(winCombos[0])
-	// console.log(arrayX[3])
 	if (
 		arrayX.includes("1") && arrayX.includes("2") && arrayX.includes("3") ||
 		arrayX.includes("4") && arrayX.includes("5") && arrayX.includes("6") ||
@@ -131,6 +125,7 @@ function checkForWin(){
 		arrayX.includes("1") && arrayX.includes("5") && arrayX.includes("9") ||
 		arrayX.includes("3") && arrayX.includes("5") && arrayX.includes("7") ) {
 			alert( "Player1 Is the WINNER");
+			console.log(tiles)
 			// resetGame()
 		} else if (
 		arrayO.includes("1") && arrayO.includes("2") && arrayO.includes("3") ||
@@ -142,6 +137,7 @@ function checkForWin(){
 		arrayO.includes("1") && arrayO.includes("5") && arrayO.includes("9") ||
 		arrayO.includes("3") && arrayO.includes("5") && arrayO.includes("7")) {
 		alert( "Player2 Is the WINNER");
+		start()
 		// resetGame();
 	} else if (clicked == 8) {
 		alert("all tiles clicked")
