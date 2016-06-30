@@ -171,8 +171,6 @@ function checkForWin(){
 // }
 
 
-
-
 // function resetGame(){
 // 	console.log('win')
 // 		// addwin()
@@ -181,3 +179,4 @@ function checkForWin(){
 // function addWin(){
 
 // }
+
