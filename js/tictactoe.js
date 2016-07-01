@@ -52,7 +52,7 @@ function addName(){
   var retVal = prompt("Enter your name Player2: ", "Player2 Name");
     player2.innerHTML = retVal;
    //  input.style.display = "none";
-  	// beginName.style.display = "none";
+  	beginName.style.display = "none";
   	alert("Your turn " + player1.innerHTML)
   	start();
 //////////////ANOTHER FORMULA TO MAKE A PLAYERS NAMES/////////////////////////
