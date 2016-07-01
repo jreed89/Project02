@@ -79,3 +79,19 @@ table{
     width:600px;
     border: 10px solid black;
 }
+#Player1_Wins {
+    background-color: teal;
+    border-radius: 10px;
+    border: 5px solid black;
+    font-size: 3em;
+    float: left;
+  /*  margin-top: 20px;*/
+}
+#Player2_Wins {
+    background-color: orange;
+    border: 5px solid black;
+    font-size: 3em;
+    border-radius: 10px;
+    float: right;
+    /*margin-top: 20px;*/
+}

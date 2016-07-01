@@ -19,6 +19,8 @@ winCombos  = ['1', '2', '3',
 var tiles = document.getElementsByClassName('box')
 var player1 = document.getElementById("Player1")
 var player2 = document.getElementById("Player2")
+var winp1 = document.getElementById("Player1_Wins")
+var winp2 = document.getElementById("Player2_Wins")
 console.log(tiles)
 //create the html that will hold where to enter your name
 function createAddName(){
@@ -74,7 +76,7 @@ function addName(){
 
 function start(){
 	// console.log(tiles) //the tiles form an array
-	tiles.innerHTML = " "
+	// tiles.innerHTML = " "
     for (var i = 0; i < tiles.length; i++){
     	tiles[i].addEventListener('click', function(){
     		// console.log(this) //shows me the tiles
@@ -87,7 +89,7 @@ function start(){
 
 var letterX = "<img src=https://zengaming.zendesk.com/system/photos/8507/2389/avatar-1452001476.jpg>";
 var letterO = "<img src=http://ecx.images-amazon.com/images/I/41kZo9j0CeL._AC_UL115_.jpg>";
-clicked = 0;
+var clicked = 0;
 function whenClicked(box){
 	// for (var i = 0; i < tiles.length; i++){
  //    	tiles[i].addEventListener('click', function()
@@ -99,21 +101,22 @@ function whenClicked(box){
 			arrayX.push(box.dataset.value) // putting the data-value in the arrayX as a string value
 			console.log(arrayX) //
 			checkForWin()
+			clicked += 1;
 		} else {
 			box.innerHTML = letterO;
 			arrayO.push(box.dataset.value) // putting the data-value in the array0 as a string value
 			console.log(arrayO) //
 			checkForWin()
+			clicked += 1;
 		}
 		// console.log(clicked) //the number of clicks before click
-		clicked += 1; // add number of clicks by 1 everytime a tile is clicked
+		// clicked += 1; // add number of clicks by 1 everytime a tile is clicked
 		// console.log(clicked) // how many clicks there are after the click
-	} else {
-		alert('Already Clicked');
-	}
+	} 
 	
 }
-
+player1Wins = 0;
+player2Wins = 0;
 function checkForWin(){
 	if (
 		arrayX.includes("1") && arrayX.includes("2") && arrayX.includes("3") ||
@@ -125,8 +128,8 @@ function checkForWin(){
 		arrayX.includes("1") && arrayX.includes("5") && arrayX.includes("9") ||
 		arrayX.includes("3") && arrayX.includes("5") && arrayX.includes("7") ) {
 			alert( "Player1 Is the WINNER");
-			console.log(tiles)
-			// resetGame()
+			winp1.innerHTML = "Wins: " + (player1Wins += 1);
+			resetGame()
 		} else if (
 		arrayO.includes("1") && arrayO.includes("2") && arrayO.includes("3") ||
 		arrayO.includes("4") && arrayO.includes("5") && arrayO.includes("6") ||
@@ -136,12 +139,12 @@ function checkForWin(){
 		arrayO.includes("3") && arrayO.includes("6") && arrayO.includes("9") ||
 		arrayO.includes("1") && arrayO.includes("5") && arrayO.includes("9") ||
 		arrayO.includes("3") && arrayO.includes("5") && arrayO.includes("7")) {
-		alert( "Player2 Is the WINNER");
-		start()
-		// resetGame();
+			alert( "Player2 Is the WINNER");
+			winp2.innerHTML = "Wins: " + (player2Wins += 1);
+			resetGame();
 	} else if (clicked == 8) {
 		alert("all tiles clicked")
-		// resetGame();
+		resetGame();
 	}
 	
 }
@@ -167,12 +170,17 @@ function checkForWin(){
 // }
 
 
-// function resetGame(){
-// 	console.log('win')
-// 		// addwin()
-// }
+function resetGame(){
+	for (var i = 0; i < tiles.length; i++){
+	tiles[i].innerHTML = "";
+}
+clicked = 0;
+arrayO = [];
+arrayX = [];
+start();
+}
 
-// function addWin(){
+function addWin(){
 
-// }
+}
 
