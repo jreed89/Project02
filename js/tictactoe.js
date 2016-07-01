@@ -87,8 +87,8 @@ function start(){
     }
 }
 
-var letterX = "<img src=https://zengaming.zendesk.com/system/photos/8507/2389/avatar-1452001476.jpg>";
-var letterO = "<img src=http://ecx.images-amazon.com/images/I/41kZo9j0CeL._AC_UL115_.jpg>";
+var letterX = "<img src=http://www.clker.com/cliparts/e/0/f/4/12428125621652493290X_mark_18x18_02.svg.hi.png>";
+var letterO = "<img src=https://4.bp.blogspot.com/-eGTrVsnjTKU/Vtv0gRps6JI/AAAAAAAAAFI/GHuO3wjcL3U/s1600/player2.png>";
 var clicked = 0;
 function whenClicked(box){
 	// for (var i = 0; i < tiles.length; i++){
@@ -117,6 +117,7 @@ function whenClicked(box){
 }
 player1Wins = 0;
 player2Wins = 0;
+tie = 0;
 function checkForWin(){
 	if (
 		arrayX.includes("1") && arrayX.includes("2") && arrayX.includes("3") ||
@@ -149,12 +150,12 @@ function checkForWin(){
 	
 }
 // for (var i = 0; i < winCombos.length; i++){
-	// 	for (var j = 0; j < arrayX.length; i++) {
-	// 		if (winCombos[i] == arrayX[j]) {
-	// 			alert("win")
-	// 		}
-	// 	}
-	// }
+// 		for (var j = 0; j < arrayX.length; i++) {
+// 			if (winCombos[i] == arrayX[j]) {
+// 				alert("win")
+// 			}
+// 		}
+// 	}
 // 	// for (var i = 0; i < tiles.length; i++){
 // 		if( arrayX == winCombos[0] || arrayX === winCombos[1] || arrayX === winCombos[2] || 
 // 			arrayX === winCombos[3] || arrayX === winCombos[4] || arrayX === winCombos[5] || 
@@ -180,7 +181,4 @@ arrayX = [];
 start();
 }
 
-function addWin(){
-
-}
 

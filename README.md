@@ -29,7 +29,7 @@ http://www.tutorialspoint.com/javascript/javascript_dialog_boxes.htm (Dialog Box
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes (includes() Method)
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype(ALL The Array Properties)
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype (All The Array Properties)
 
 http://www.w3schools.com/css/css_table.asp (CSS Tables)
 

@@ -8,29 +8,29 @@ html {
     overflow: scroll;
     
 }
-/*td:hover {
-    background-image: url(http://wir.skyrock.net/wir/v1/profilcrop/?im=%2F1239%2F31551239%2Fpics%2Fphoto_31551239.jpg&c=isi&w=100&h=100&q=90);
-    height: 30%;
-    width: 30%;
-}*/
+td:hover {
+    /*background-image: url(http://wir.skyrock.net/wir/v1/profilcrop/?im=%2F1239%2F31551239%2Fpics%2Fphoto_31551239.jpg&c=isi&w=100&h=100&q=90);*/
+   /* height: 30%;
+    width: 30%;*/
+    
+}
 img{
     height: 100%;
     width: 100%;
 }
 .box {
-    height: 200px;
-    width: 200px;
-    background-color: brown;
-    /*display: inline-block;*/
+    height: 150px;
+    width: 150px;
+    background-color: #6ACAEB;
     box-sizing: border-box;
     margin: 0 auto;
     border: 10px solid grey;
-    /*padding-bottom: 100px;
+    border-radius: 10px;
 
 */}
 h1{
     text-align: center;
-    color: green;
+    color: #33CC40;
     font-size: 100px;
 }
 h3 {
@@ -39,10 +39,10 @@ h3 {
     display: inline-block;
     border: 2px solid white;
     border-radius: 5px;
-    /*padding: 10px;*/
+    /*margin: 0 auto;*/
 }
 #Player1 {
-    background-color: teal;
+    background-color: green;
     border-radius: 10px;
     border: 5px solid black;
     font-size: 3em;
@@ -55,17 +55,17 @@ h3 {
     border-radius: 10px;
     float: right;
 }
+.wrapper{
+    text-align: center;
+}
 #start {
     font-family: 'Kaushan';
     font-size: 1em;
-    background: purple;
+    background: red;
     border: 2px solid blue;
     border-radius: 5px;
     padding: 1em;
     position:relative;
-    top:50%; 
-    left:50%;
-    display: inline-block;
     transition-duration: 2s;
     
 }
@@ -75,17 +75,18 @@ h3 {
 table{
     margin: 0 auto;
     margin-top: 200px;
-    height:600px;
-    width:600px;
+    height:450px;
+    width:450px;
     border: 10px solid black;
+    border-radius: 10px;
 }
 #Player1_Wins {
-    background-color: teal;
+    background-color: green;
     border-radius: 10px;
     border: 5px solid black;
     font-size: 3em;
     float: left;
-  /*  margin-top: 20px;*/
+    margin-top: 150px;
 }
 #Player2_Wins {
     background-color: orange;
@@ -93,5 +94,5 @@ table{
     font-size: 3em;
     border-radius: 10px;
     float: right;
-    /*margin-top: 20px;*/
+    margin-top: 150px;
 }
