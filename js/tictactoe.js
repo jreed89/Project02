@@ -2,7 +2,7 @@ window.onload = function(){
     console.log("this is the it")
     	var beginName = document.getElementById("start"); 
     	beginName.onclick = function(){ //when "lets get started" button is clicked,
-    	createAddName()
+    	addName()
     	}
 		
 }
@@ -23,20 +23,23 @@ var winp1 = document.getElementById("Player1_Wins")
 var winp2 = document.getElementById("Player2_Wins")
 console.log(tiles)
 //create the html that will hold where to enter your name
-function createAddName(){
-	var startButton = document.getElementById('start');
-	var name = document.getElementById('input-container')
-	// var nameButton = document.createElement('button')
-	var nameInput = document.createElement('input')
-	nameInput.setAttribute('id', "input-box")
-	// nameInput.setAttribute('id', "input-box")
-	// nameInput.setAttribute('type', "text")
-	// nameButton.setAttribute('id', "submit")
-	// nameButton.innerHTML = "NAME";
-	name.appendChild(nameInput)
-	// name.appendChild(nameButton)
-	addName()
-}
+
+
+//creating the add name input field
+// function createAddName(){
+// 	var startButton = document.getElementById('start');
+// 	var name = document.getElementById('input-container')
+// 	// var nameButton = document.createElement('button')
+// 	var nameInput = document.createElement('input')
+// 	nameInput.setAttribute('id', "input-box")
+// 	// nameInput.setAttribute('id', "input-box")
+// 	// nameInput.setAttribute('type', "text")
+// 	// nameButton.setAttribute('id', "submit")
+// 	// nameButton.innerHTML = "NAME";
+// 	name.appendChild(nameInput)
+// 	// name.appendChild(nameButton)
+// 	addName()
+// }
 //Display Players Names in the proper fields and make start button and name input dissapear
 //the game is activated
 function addName(){
@@ -48,9 +51,9 @@ function addName(){
     player1.innerHTML = retVal;
   var retVal = prompt("Enter your name Player2: ", "Player2 Name");
     player2.innerHTML = retVal;
-    input.style.display = "none";
-  	beginName.style.display = "none";
-  	alert("your turn Player 1")
+   //  input.style.display = "none";
+  	// beginName.style.display = "none";
+  	alert("Your turn " + player1.innerHTML)
   	start();
 //////////////ANOTHER FORMULA TO MAKE A PLAYERS NAMES/////////////////////////
   // myButton.addEventListener('click', function(){
@@ -128,7 +131,7 @@ function checkForWin(){
 		arrayX.includes("3") && arrayX.includes("6") && arrayX.includes("9") ||
 		arrayX.includes("1") && arrayX.includes("5") && arrayX.includes("9") ||
 		arrayX.includes("3") && arrayX.includes("5") && arrayX.includes("7") ) {
-			alert( "Player1 Is the WINNER");
+			alert( player1.innerHTML + " is the WINNER");
 			winp1.innerHTML = "Wins: " + (player1Wins += 1);
 			resetGame()
 		} else if (
@@ -140,7 +143,7 @@ function checkForWin(){
 		arrayO.includes("3") && arrayO.includes("6") && arrayO.includes("9") ||
 		arrayO.includes("1") && arrayO.includes("5") && arrayO.includes("9") ||
 		arrayO.includes("3") && arrayO.includes("5") && arrayO.includes("7")) {
-			alert( "Player2 Is the WINNER");
+			alert( player2.innerHTML + " is the WINNER");
 			winp2.innerHTML = "Wins: " + (player2Wins += 1);
 			resetGame();
 	} else if (clicked == 8) {

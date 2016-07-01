@@ -12,7 +12,7 @@ td:hover {
     /*background-image: url(http://wir.skyrock.net/wir/v1/profilcrop/?im=%2F1239%2F31551239%2Fpics%2Fphoto_31551239.jpg&c=isi&w=100&h=100&q=90);*/
    /* height: 30%;
     width: 30%;*/
-    
+
 }
 img{
     height: 100%;
@@ -61,7 +61,7 @@ h3 {
 #start {
     font-family: 'Kaushan';
     font-size: 1em;
-    background: red;
+    background: green;
     border: 2px solid blue;
     border-radius: 5px;
     padding: 1em;
@@ -70,11 +70,11 @@ h3 {
     
 }
 #start:hover {
-    background: blue;
+    background: orange;
 }
 table{
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 350px;
     height:450px;
     width:450px;
     border: 10px solid black;
